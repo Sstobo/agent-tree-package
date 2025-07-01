@@ -30,14 +30,17 @@ npx agent-tree <agent-name>
 ## Architecture
 
 ### Core Structure
+
 - **packages/cli/src/index.ts** - Main CLI entry point with hardcoded agent registry
 - **packages/cli/agents/** - Agent definitions with directory-based structure
 - **packages/cli/commands/** - Claude Code command files (.md) for agent activation
 - **packages/cli/agent-tree/** - Core configuration and coordination files
 
 ### Agent System
+
 Each agent follows this pattern:
-```
+
+```text
 agents/{agent-name}/
 ├── README.md           # Agent documentation
 ├── manuals/           # Reference docs
@@ -47,6 +50,7 @@ agents/{agent-name}/
 ```
 
 ### CLI Installation Process
+
 1. User runs `npx agent-tree <agent-name>`
 2. CLI copies agent files to `agent-tree/{agent-name}/`
 3. Command file copied to `.claude/commands/{agent-name}.md`
@@ -54,6 +58,7 @@ agents/{agent-name}/
 5. Agent activated with `/{agent-name}` in Claude Code
 
 ### Configuration System
+
 - **agent-tree-config.md** - Global variables (SYSTEM_DOCS, ACTIVE_CONTEXT, WORK_LOAD, PRD)
 - **active-context.md** - Agent coordination and shared state
 - Variables use substitution in command files (e.g., `AGENT_NAME = "servitor"`)
@@ -69,13 +74,16 @@ agents/{agent-name}/
 ## Multi-Agent Coordination
 
 ### Key Principles
+
 - Agents never delete other agents' work
 - Shared state through `active-context.md` (edited only in main branch)
 - Git worktree support for isolated agent work
 - YAML-based persona definitions in command files
 
 ### Agent Activation
+
 Agents use YAML configuration in command files:
+
 ```yaml
 agent:
   name: AGENT_NAME
@@ -92,18 +100,21 @@ commands:  # Use * prefix (e.g., *help, *status)
 ## Development Patterns
 
 ### TypeScript Configuration
+
 - Target: ES2022 modules
 - Strict mode enabled
 - Declaration files generated
 - Source maps included
 
 ### File Copying Strategy
+
 - Direct `cpSync` operations (no complex bundling)
 - Recursive directory copying for agent structures
 - Graceful handling of missing files
 - User confirmation before installation
 
 ### Command Integration
+
 Commands are markdown files that define:
 - Agent persona and behavior
 - Startup sequences
