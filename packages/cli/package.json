@@ -1,0 +1,47 @@
+{
+  "name": "agent-tree",
+  "version": "0.2.9",
+  "description": "The shadcn/ui for AI agents - copy-paste AI agents for Claude Code",
+  "bin": {
+    "agent-tree": "./dist/index.js"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "agents",
+    "commands",
+    "agent-tree/agent-tree-config.md",
+    "agent-tree/active-context.md",
+    "agent-tree/mcp-installation-docs",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "claude",
+    "ai",
+    "agents",
+    "cli",
+    "npx"
+  ],
+  "author": "agent-tree",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agent-tree/agent-tree.git"
+  },
+  "bugs": {
+    "url": "https://github.com/agent-tree/agent-tree/issues"
+  },
+  "homepage": "https://agent-tree.com"
+}

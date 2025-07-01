@@ -1,0 +1,33 @@
+# Source files
+src/
+*.ts
+tsconfig.json
+
+# Development files
+node_modules/
+.git/
+.gitignore
+
+# Build artifacts (except dist which we want to include)
+*.tsbuildinfo
+
+# Development docs (keep agent docs)
+README.md
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+test/
+tests/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
