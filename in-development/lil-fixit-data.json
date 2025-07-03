@@ -1,0 +1,353 @@
+{
+  "name": "lil-fixit",
+  "slug": "lil-fixit",
+  "title": "Lil Fixit Repair Bot",
+  "icon": "🏃",
+  "description": "Agent for completing todo items and QA lists. Works in parallel with other agents and handles small targeted fixes.",
+  "longDescription": "Agent that processes todo items and quality assurance tasks while coordinating with other agents. Includes random name generation, status reporting, and shared context management.",
+  "category": "utility",
+  "author": "agent-tree",
+  "version": "1.0.0",
+  "license": "MIT",
+  "features": [
+    "Todo item tracking and completion",
+    "QA list processing",
+    "Parallel task execution with other agents",
+    "Random name generation for agent instances",
+    "Status reporting and context updates",
+    "Git worktree workflow support"
+  ],
+  "whenToUse": "Use for completing todo items, QA tasks, small fixes, or when you need an agent to work in parallel with others.",
+  "installation": "Run `npx agent-tree lil-fixit` to install, then use `/lil-fixit` in Claude Code.",
+  "usage": "Type `/lil-fixit` in Claude Code to activate. Use *help to see available commands.",
+  "npxCommand": "npx agent-tree lil-fixit",
+  "commands": [
+    {
+      "name": "help",
+      "description": "Show numbered list of available commands for selection",
+      "usage": "*help",
+      "examples": ["*help - Display all available commands"]
+    },
+    {
+      "name": "start-to-finish",
+      "description": "Execute the start-to-finish workflow",
+      "usage": "*start-to-finish",
+      "examples": ["*start-to-finish - Begin complete workflow"]
+    },
+    {
+      "name": "report-in",
+      "description": "Generate status report with completed items, todos, and git status",
+      "usage": "*report-in",
+      "examples": ["*report-in - Generate current status report"]
+    },
+    {
+      "name": "exit",
+      "description": "Deactivate lil-fixit agent",
+      "usage": "*exit",
+      "examples": ["*exit - Deactivate lil-fixit agent"]
+    }
+  ],
+  "workflows": [
+    {
+      "name": "start-to-finish",
+      "description": "Complete workflow for task execution",
+      "steps": [
+        "Load and read the active-context",
+        "Sign in and declare active work",
+        "Advise user to commit local work and offer assistance",
+        "Run start-work task to create work environment",
+        "Navigate to worktree directory and plan solution",
+        "Solve the task",
+        "Inform user of success",
+        "Update active-context with work item state",
+        "Run finish-work task to finalize cleanup"
+      ],
+      "prerequisites": ["Clean git working tree", "Access to active-context.md"]
+    },
+    {
+      "name": "health",
+      "description": "Code health check workflow",
+      "steps": [
+        "Run npx convex dev and spin off convex-bot agent",
+        "Run npm run dev and solve any bugs or errors",
+        "Run npm run build and solve any bugs or errors",
+        "Report results to user"
+      ],
+      "prerequisites": ["Node.js environment", "Convex project setup"]
+    }
+  ],
+  "tasks": [
+    {
+      "name": "report-in",
+      "description": "Generate YAML status report with completed items, review needs, todos, progress, context status, worktree status, and git hygiene assessment",
+      "filePath": "tasks/report-in.md",
+      "category": "management"
+    },
+    {
+      "name": "start-work",
+      "description": "Create isolated Git worktree for agent development work",
+      "filePath": "tasks/start-work.md",
+      "category": "setup"
+    },
+    {
+      "name": "finish-work",
+      "description": "Safely publish results and clean up worktree environment",
+      "filePath": "tasks/finish-work.md",
+      "category": "cleanup"
+    }
+  ],
+  "scripts": [
+    {
+      "name": "current-date",
+      "description": "Print current date and time to seconds",
+      "command": "chmod +x agent-tree/lil-fixit/scripts/current-date.sh && agent-tree/lil-fixit/scripts/current-date.sh",
+      "filePath": "scripts/current-date.sh"
+    },
+    {
+      "name": "random-name",
+      "description": "Generate random pop culture name from 100 character names",
+      "command": "chmod +x agent-tree/lil-fixit/scripts/random-name.sh && agent-tree/lil-fixit/scripts/random-name.sh",
+      "filePath": "scripts/random-name.sh"
+    }
+  ],
+  "documentation": {
+    "readme": "Guide covering installation, usage, commands, workflows, parallel task execution, and agent coordination patterns.",
+    "manuals": [
+      {
+        "name": "convex-docs",
+        "description": "Convex documentation for reference when working with Convex-related tasks",
+        "filePath": "manuals/convex-docs.md",
+        "content": "Convex development guidelines for coordination with Convex development work"
+      }
+    ],
+    "guides": [
+      {
+        "title": "Todo Item Processing",
+        "description": "Process and complete todo items systematically",
+        "steps": [
+          "Read todo lists and QA requirements",
+          "Prioritize items based on scope and impact",
+          "Execute targeted fixes for small items",
+          "Update shared context with progress",
+          "Coordinate with other agents"
+        ],
+        "category": "usage"
+      },
+      {
+        "title": "Parallel Agent Coordination",
+        "description": "Work alongside other agents without conflicts",
+        "steps": [
+          "Never delete other agents' work or comments",
+          "Update active-context only in main branch",
+          "Edit only your own sections in shared documents",
+          "Maintain communication about task progress",
+          "Use worktrees for isolated development"
+        ],
+        "category": "usage"
+      },
+      {
+        "title": "Status Reporting",
+        "description": "Generate comprehensive status reports",
+        "steps": [
+          "Review current context and work state",
+          "Check git status of repository changes",
+          "Read active context and work load documents",
+          "Generate YAML status report with all sections",
+          "Include completed items, todos, and assessments"
+        ],
+        "category": "management"
+      }
+    ],
+    "api": "Git commands, script execution for dates and names, status reporting through YAML format"
+  },
+  "examples": [
+    {
+      "title": "Status Report Format",
+      "description": "YAML format for agent status reports",
+      "code": "Title: Agent lil-fixit-neo-status-2025-07-01\nCompleted:\n  1. Fixed TypeScript import errors\n  2. Updated todo list items\nNeeds Review:\n  1. CSS styling changes need validation\nTodo:\n  1. Complete remaining QA items\n  2. Update documentation\nIn Progress: Working on component refactoring\nActive context: Yes, signed in and updating\nWorktree active: Yes, in agent worktree\nRepo: Good hygiene, changes isolated in worktree",
+      "language": "yaml",
+      "category": "basic"
+    },
+    {
+      "title": "Random Name Generation",
+      "description": "Generate random pop culture character names",
+      "code": "#!/bin/bash\n# Random selection from 100 pop culture names\nnames=(\n    \"Luke Skywalker\"\n    \"Harry Potter\"\n    \"Batman\"\n    \"Mario\"\n    # ... 96 more names\n)\nrandom_index=$(( RANDOM % ${#names[@]} ))\necho \"${names[$random_index]}\"",
+      "language": "bash",
+      "category": "basic"
+    }
+  ],
+  "codeSnippets": [
+    {
+      "title": "Date Script",
+      "description": "Get current date and time",
+      "code": "#!/bin/bash\n# Print current date and time to seconds\ndate +\"%Y-%m-%d %H:%M:%S\"",
+      "language": "bash",
+      "tags": ["date", "time", "utility"]
+    },
+    {
+      "title": "Git Status Check",
+      "description": "Check repository status for reporting",
+      "code": "# Check git status\ngit status\n\n# Check for uncommitted changes\ngit diff --quiet --exit-code || echo \"Changes present\"\n\n# List current branch\ngit branch --show-current",
+      "language": "bash",
+      "tags": ["git", "status", "reporting"]
+    }
+  ],
+  "mcpCommands": [],
+  "dependencies": [],
+  "requiredSetup": [
+    {
+      "title": "Git Repository",
+      "description": "Project must be a git repository for worktree and status operations",
+      "command": "git status",
+      "verification": "Should show git repository status",
+      "optional": false
+    },
+    {
+      "title": "Bash Environment",
+      "description": "Bash shell for running date and name generation scripts",
+      "command": "bash --version",
+      "verification": "Bash should be available for script execution",
+      "optional": false
+    },
+    {
+      "title": "Active Context File",
+      "description": "agent-tree/active-context.md for agent coordination",
+      "verification": "File should exist for multi-agent coordination",
+      "optional": true
+    }
+  ],
+  "files": [
+    "README.md",
+    "manuals/convex-docs.md",
+    "scripts/current-date.sh",
+    "scripts/random-name.sh",
+    "tasks/report-in.md",
+    "tasks/start-work.md",
+    "tasks/finish-work.md",
+    "workflows/health.md",
+    "workflows/start-to-finish.md"
+  ],
+  "fileStructure": [
+    {
+      "name": "lil-fixit",
+      "type": "directory",
+      "path": "agent-tree/lil-fixit",
+      "description": "Root directory for lil-fixit agent",
+      "children": [
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "agent-tree/lil-fixit/README.md",
+          "description": "Agent overview and usage documentation"
+        },
+        {
+          "name": "manuals",
+          "type": "directory",
+          "path": "agent-tree/lil-fixit/manuals",
+          "description": "Reference documentation",
+          "children": [
+            {
+              "name": "convex-docs.md",
+              "type": "file",
+              "path": "agent-tree/lil-fixit/manuals/convex-docs.md",
+              "description": "Convex documentation for reference"
+            }
+          ]
+        },
+        {
+          "name": "scripts",
+          "type": "directory",
+          "path": "agent-tree/lil-fixit/scripts",
+          "description": "Utility scripts",
+          "children": [
+            {
+              "name": "current-date.sh",
+              "type": "file",
+              "path": "agent-tree/lil-fixit/scripts/current-date.sh",
+              "description": "Script to get current date and time"
+            },
+            {
+              "name": "random-name.sh",
+              "type": "file",
+              "path": "agent-tree/lil-fixit/scripts/random-name.sh",
+              "description": "Script to generate random pop culture names"
+            }
+          ]
+        },
+        {
+          "name": "tasks",
+          "type": "directory",
+          "path": "agent-tree/lil-fixit/tasks",
+          "description": "Individual task definitions",
+          "children": [
+            {
+              "name": "report-in.md",
+              "type": "file",
+              "path": "agent-tree/lil-fixit/tasks/report-in.md",
+              "description": "Generate YAML status report"
+            },
+            {
+              "name": "start-work.md",
+              "type": "file",
+              "path": "agent-tree/lil-fixit/tasks/start-work.md",
+              "description": "Create isolated Git worktree"
+            },
+            {
+              "name": "finish-work.md",
+              "type": "file",
+              "path": "agent-tree/lil-fixit/tasks/finish-work.md",
+              "description": "Clean up worktree environment"
+            }
+          ]
+        },
+        {
+          "name": "workflows",
+          "type": "directory",
+          "path": "agent-tree/lil-fixit/workflows",
+          "description": "Multi-step workflow processes",
+          "children": [
+            {
+              "name": "health.md",
+              "type": "file",
+              "path": "agent-tree/lil-fixit/workflows/health.md",
+              "description": "Code health check workflow"
+            },
+            {
+              "name": "start-to-finish.md",
+              "type": "file",
+              "path": "agent-tree/lil-fixit/workflows/start-to-finish.md",
+              "description": "Complete task workflow"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "created": "2024-01-01",
+  "updated": "2025-07-01",
+  "downloads": 0,
+  "stars": 0,
+  "persona": {
+    "role": "Todo and QA task completion assistant",
+    "style": "Task-oriented, efficient, precise",
+    "identity": "Developer who runs in parallel with other agents and completes todo items or QA lists",
+    "focus": "Making targeted fixes for small items, operating in parallel with other agents, maintaining work load and active context for agent communication",
+    "coreGuidelines": [
+      "Never delete another agent's comments, work or notes",
+      "Only edit ACTIVE_CONTEXT or WORK_LOAD documents in main branch, never in worktree",
+      "Only change ACTIVE_CONTEXT in sections directly referencing the agent by full name",
+      "Question users to clarify problems and plans before thinking deeply",
+      "Use Serena MCP for codebase analysis when USE_SERENA_MCP is true"
+    ]
+  },
+  "systemDocumentation": [
+    "SYSTEM_DOCS - Architecture documentation referenced in agent-tree-config.md",
+    "PRD - Product requirements document for project context",
+    "ACTIVE_CONTEXT - Shared state and coordination between agents"
+  ],
+  "coreReferences": [
+    "agent-tree/agent-tree-config.md - Global variables and configuration",
+    "agent-tree/active-context.md - Agent coordination and shared state",
+    "agent-tree/lil-fixit/README.md - Agent documentation and features"
+  ]
+}

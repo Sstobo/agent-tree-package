@@ -1,0 +1,143 @@
+ {
+    "version": "1.0.0",
+    "agents": [
+      {
+        "name": "string",
+        "slug": "string",
+        "title": "string",
+        "icon": "string",
+        "description": "string",
+        "longDescription": "string (optional)",
+        "category": "string",
+        "author": "string",
+        "version": "string (optional)",
+        "license": "string (optional)",
+        "features": ["string"],
+        "whenToUse": "string",
+        "installation": "string",
+        "usage": "string",
+        "npxCommand": "string (optional)",
+        "commands": [
+          {
+            "name": "string",
+            "description": "string",
+            "usage": "string",
+            "examples": ["string (optional)"]
+          }
+        ],
+        "workflows": [
+          {
+            "name": "string",
+            "description": "string",
+            "steps": ["string"],
+            "prerequisites": ["string (optional)"]
+          }
+        ],
+        "tasks": [
+          {
+            "name": "string",
+            "description": "string",
+            "filePath": "string",
+            "category": "setup | execution | cleanup | management"
+          }
+        ],
+        "scripts": [
+          {
+            "name": "string",
+            "description": "string",
+            "command": "string",
+            "filePath": "string"
+          }
+        ],
+        "documentation": {
+          "readme": "string",
+          "manuals": [
+            {
+              "name": "string",
+              "description": "string",
+              "filePath": "string",
+              "content": "string (optional)"
+            }
+          ],
+          "guides": [
+            {
+              "title": "string",
+              "description": "string",
+              "steps": ["string"],
+              "category": "setup | usage | advanced | troubleshooting"
+            }
+          ],
+          "api": "string (optional)"
+        },
+        "examples": [
+          {
+            "title": "string",
+            "description": "string",
+            "code": "string",
+            "language": "string",
+            "category": "basic | advanced | integration"
+          }
+        ],
+        "codeSnippets": [
+          {
+            "title": "string",
+            "description": "string",
+            "code": "string",
+            "language": "string",
+            "tags": ["string"]
+          }
+        ],
+        "mcpCommands": [
+          {
+            "name": "string",
+            "description": "string",
+            "category": "deployment | tables | functions | environment",
+            "usage": "string",
+            "example": "string (optional)"
+          }
+        ],
+        "dependencies": ["string (optional)"],
+        "requiredSetup": [
+          {
+            "title": "string",
+            "description": "string",
+            "command": "string (optional)",
+            "verification": "string (optional)",
+            "optional": "boolean"
+          }
+        ],
+        "files": ["string"],
+        "fileStructure": [
+          {
+            "name": "string",
+            "type": "file | directory",
+            "path": "string",
+            "description": "string (optional)",
+            "children": ["FileStructureItem (optional)"]
+          }
+        ],
+        "created": "string (YYYY-MM-DD)",
+        "updated": "string (YYYY-MM-DD)",
+        "downloads": "number",
+        "stars": "number (optional)",
+        "persona": {
+          "role": "string (optional)",
+          "style": "string (optional)",
+          "identity": "string (optional)",
+          "focus": "string (optional)",
+          "coreGuidelines": ["string (optional)"]
+        },
+        "systemDocumentation": ["string (optional)"],
+        "coreReferences": ["string (optional)"]
+      }
+    ],
+    "categories": [
+      {
+        "id": "string",
+        "name": "string",
+        "description": "string",
+        "icon": "string (optional)",
+        "color": "string (optional)"
+      }
+    ]
+  }

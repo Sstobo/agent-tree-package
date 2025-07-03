@@ -1,0 +1,259 @@
+{
+  "name": "pm",
+  "slug": "pm",
+  "title": "Project Manager",
+  "icon": "📋",
+  "description": "Agent for project management, task tracking, and sprint planning. Handles project status reporting and team coordination.",
+  "longDescription": "Agent that manages project tasks, sprint planning, and status reporting. Provides project health monitoring, task prioritization, and sprint coordination workflows.",
+  "category": "management",
+  "author": "agent-tree",
+  "version": "1.0.0",
+  "license": "MIT",
+  "features": [
+    "Sprint planning and task selection",
+    "Project status reporting and metrics",
+    "Task prioritization based on business value",
+    "Team coordination and workload balancing",
+    "Backlog grooming and story estimation",
+    "Sprint setup and ceremony scheduling"
+  ],
+  "whenToUse": "Use for project management, task tracking, sprint planning, and team coordination.",
+  "installation": "Run `npx agent-tree pm` to install, then use `/pm` in Claude Code.",
+  "usage": "Type `/pm` in Claude Code to activate. Use *help to see available commands.",
+  "npxCommand": "npx agent-tree pm",
+  "commands": [
+    {
+      "name": "help",
+      "description": "Show numbered list of available commands for selection",
+      "usage": "*help",
+      "examples": ["*help - Display all available commands"]
+    },
+    {
+      "name": "status",
+      "description": "Check project status including sprint progress, blockers, and team velocity",
+      "usage": "*status",
+      "examples": ["*status - Display current project status"]
+    },
+    {
+      "name": "plan-sprint",
+      "description": "Plan upcoming sprint by selecting tasks and balancing workload",
+      "usage": "*plan-sprint",
+      "examples": ["*plan-sprint - Plan the next sprint"]
+    },
+    {
+      "name": "sprint-planning",
+      "description": "Execute complete sprint planning workflow",
+      "usage": "*sprint-planning",
+      "examples": ["*sprint-planning - Run full sprint planning process"]
+    },
+    {
+      "name": "exit",
+      "description": "Deactivate PM agent",
+      "usage": "*exit",
+      "examples": ["*exit - Deactivate PM agent"]
+    }
+  ],
+  "workflows": [
+    {
+      "name": "sprint-planning",
+      "description": "Complete sprint planning process from backlog grooming to sprint kickoff",
+      "steps": [
+        "Review previous sprint metrics and team availability",
+        "Groom backlog: refine stories, add acceptance criteria, estimate points",
+        "Run sprint planning meeting: present goals, review backlog, get team commitment",
+        "Set up sprint: create in tracking tool, assign tasks, set up board",
+        "Kickoff: communicate goals, review commitments, start sprint"
+      ],
+      "prerequisites": ["Product backlog", "Team availability information"]
+    }
+  ],
+  "tasks": [
+    {
+      "name": "plan-sprint",
+      "description": "Select tasks, estimate effort, balance workload, create sprint goals, and assign tasks to team members",
+      "filePath": "tasks/plan-sprint.md",
+      "category": "management"
+    },
+    {
+      "name": "status",
+      "description": "Review sprint board, check completion rates, identify blockers, calculate velocity, and generate status report",
+      "filePath": "tasks/status.md",
+      "category": "management"
+    }
+  ],
+  "scripts": [],
+  "documentation": {
+    "readme": "Guide covering project management features, sprint planning, task tracking, and team coordination workflows.",
+    "manuals": [],
+    "guides": [
+      {
+        "title": "Sprint Planning Process",
+        "description": "Plan sprints with task selection and workload balancing",
+        "steps": [
+          "Review product backlog and prioritize tasks",
+          "Estimate task complexity using story points",
+          "Balance sprint capacity with team availability",
+          "Create clear sprint goals",
+          "Assign tasks to team members",
+          "Consider dependencies and risk factors"
+        ],
+        "category": "usage"
+      },
+      {
+        "title": "Project Status Monitoring",
+        "description": "Track project health and team performance",
+        "steps": [
+          "Review current sprint board status",
+          "Check task completion rates",
+          "Identify blockers and dependencies",
+          "Calculate team velocity metrics",
+          "Generate comprehensive status reports",
+          "Assess project risks"
+        ],
+        "category": "usage"
+      },
+      {
+        "title": "Backlog Management",
+        "description": "Organize and prioritize work items",
+        "steps": [
+          "Review and refine user stories",
+          "Add acceptance criteria to stories",
+          "Estimate story points for tasks",
+          "Identify technical dependencies",
+          "Prioritize based on business value",
+          "Balance technical debt with features"
+        ],
+        "category": "advanced"
+      }
+    ],
+    "api": "Task tracking, sprint management, status reporting, and team coordination functions"
+  },
+  "examples": [
+    {
+      "title": "Sprint Status Report",
+      "description": "Project status output format",
+      "code": "Sprint Progress: 65% (13/20 tasks completed)\nCompleted Tasks: 13\nRemaining Tasks: 7\nCurrent Blockers: 2 (API dependency, design review)\nTeam Velocity: 23 story points this sprint\nRisk Assessment: Medium (2 blockers may impact delivery)",
+      "language": "text",
+      "category": "basic"
+    },
+    {
+      "title": "Sprint Planning Output",
+      "description": "Sprint planning results format",
+      "code": "Sprint Goals:\n- Complete user authentication module\n- Implement file upload feature\n- Fix 3 critical bugs\n\nTeam Assignments:\n- Developer A: Auth module (8 points)\n- Developer B: File upload (5 points)\n- Developer C: Bug fixes (3 points)\n\nTotal Capacity: 16 story points\nSprint Duration: 2 weeks",
+      "language": "text",
+      "category": "basic"
+    }
+  ],
+  "codeSnippets": [
+    {
+      "title": "Task Prioritization Matrix",
+      "description": "Framework for prioritizing tasks",
+      "code": "Priority Matrix:\nHigh Impact + High Effort = Plan carefully\nHigh Impact + Low Effort = Do first\nLow Impact + High Effort = Avoid\nLow Impact + Low Effort = Do last\n\nFactors to consider:\n- Business value\n- Technical complexity\n- Dependencies\n- Risk level\n- Learning opportunities",
+      "language": "text",
+      "tags": ["prioritization", "planning", "framework"]
+    },
+    {
+      "title": "Sprint Metrics Calculation",
+      "description": "Calculate team velocity and progress",
+      "code": "Velocity = Total story points completed / Sprint duration\nBurn Rate = Tasks completed / Days elapsed\nCompletion Rate = Completed tasks / Total planned tasks\nBlocker Impact = Blocked story points / Total sprint points\n\nHealthy Sprint Indicators:\n- Burn rate consistent with timeline\n- Completion rate > 80%\n- Blocker impact < 20%",
+      "language": "text",
+      "tags": ["metrics", "velocity", "tracking"]
+    }
+  ],
+  "mcpCommands": [],
+  "dependencies": [],
+  "requiredSetup": [
+    {
+      "title": "Product Backlog",
+      "description": "Organized list of features and tasks for sprint planning",
+      "verification": "Should have prioritized user stories with acceptance criteria",
+      "optional": true
+    },
+    {
+      "title": "Team Information",
+      "description": "Team member availability and capacity for workload planning",
+      "verification": "Should know team size and availability",
+      "optional": true
+    }
+  ],
+  "files": [
+    "README.md",
+    "tasks/plan-sprint.md",
+    "tasks/status.md",
+    "workflows/sprint-planning.md"
+  ],
+  "fileStructure": [
+    {
+      "name": "pm",
+      "type": "directory",
+      "path": "agent-tree/pm",
+      "description": "Root directory for PM agent",
+      "children": [
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "agent-tree/pm/README.md",
+          "description": "Agent overview and project management features"
+        },
+        {
+          "name": "tasks",
+          "type": "directory",
+          "path": "agent-tree/pm/tasks",
+          "description": "Individual task definitions",
+          "children": [
+            {
+              "name": "plan-sprint.md",
+              "type": "file",
+              "path": "agent-tree/pm/tasks/plan-sprint.md",
+              "description": "Sprint planning task with workload balancing"
+            },
+            {
+              "name": "status.md",
+              "type": "file",
+              "path": "agent-tree/pm/tasks/status.md",
+              "description": "Project status reporting and metrics"
+            }
+          ]
+        },
+        {
+          "name": "workflows",
+          "type": "directory",
+          "path": "agent-tree/pm/workflows",
+          "description": "Multi-step workflow processes",
+          "children": [
+            {
+              "name": "sprint-planning.md",
+              "type": "file",
+              "path": "agent-tree/pm/workflows/sprint-planning.md",
+              "description": "Complete sprint planning workflow"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "created": "2024-01-01",
+  "updated": "2025-07-01",
+  "downloads": 0,
+  "stars": 0,
+  "persona": {
+    "role": "Project Management Specialist",
+    "style": "Organized, proactive, collaborative, results-driven",
+    "identity": "Project Manager focused on agile methodologies and team coordination",
+    "focus": "Sprint planning, task prioritization, and project health monitoring",
+    "coreGuidelines": [
+      "Clear communication and transparency",
+      "Data-driven decision making",
+      "Team empowerment and support",
+      "Continuous improvement mindset",
+      "Stakeholder alignment",
+      "Risk mitigation and planning"
+    ]
+  },
+  "systemDocumentation": [],
+  "coreReferences": [
+    "agent-tree/pm/README.md - Project management features and workflows",
+    "agent-tree/pm/tasks/ - Sprint planning and status reporting tasks",
+    "agent-tree/pm/workflows/ - Complete sprint planning process"
+  ]
+}
