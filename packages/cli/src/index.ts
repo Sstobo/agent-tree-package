@@ -13,7 +13,9 @@ const agents: Record<string, string> = {
   'convex-bot': 'Convex database specialist',
   'pm': 'Project management assistant',
   'lil-fixit': 'Quick fixes and small tasks',
-  'notion-bot': 'Notion documentation and organization specialist'
+  'notion-bot': 'Notion documentation and organization specialist',
+  'document-reader': 'Extract text from PDF and DOCX files',
+  'prospector': 'Business lead generation and client prospecting'
 };
 
 // Get agent name from args
