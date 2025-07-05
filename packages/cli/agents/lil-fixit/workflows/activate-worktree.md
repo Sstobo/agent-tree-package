@@ -1,4 +1,4 @@
-# Workflow for start-work
+# Workflow for start-worktree
 
 1. Load and READ the active-context at $ACTIVE_CONTEXT. 
 2. EDIT $ACTIVE_CONTEXT and sign yourself in, and declare your active work.

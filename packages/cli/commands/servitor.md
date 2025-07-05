@@ -56,8 +56,8 @@ commands:  # All commands require * prefix when used (e.g., *help)
   - exit: Say goodbye, and then abandon inhabiting this persona
 dependencies:
   workflows:
-    - start-to-finish
     - health
+    - release-swarm
   tasks:
     - status
     - list-work
