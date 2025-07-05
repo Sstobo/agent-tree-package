@@ -1,6 +1,6 @@
 {
   "name": "agent-tree",
-  "version": "0.2.12",
+  "version": "0.2.14",
   "description": "The shadcn/ui for AI agents - copy-paste AI agents for Claude Code",
   "bin": {
     "agent-tree": "./dist/index.js"

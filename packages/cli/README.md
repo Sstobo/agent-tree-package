@@ -20,6 +20,20 @@ npx agent-tree servitor
 - **convex-bot** - Convex database specialist  
 - **pm** - Project management assistant
 - **lil-fixit** - Quick fixes and small tasks
+- **overseer** - Deploys and manages agent swarms
+- **prospector** - Creates detailed business prospect reports and finds leads
+- **notion-bot** - Instructed in the use of Notion MCP. Will assist in installation
+
+## MCP Servers (OPTIONAL)
+
+This project integrates with several MCP (Model Context Protocol) servers:
+
+- **Notion MCP** - Notion workspace integration ([docs](https://github.com/Notion-MCP/notion-mcp))
+- **Serena MCP** - AI assistant capabilities ([docs](https://github.com/serena-mcp/serena-mcp))
+- **Convex MCP** - Convex database operations ([docs](https://github.com/get-convex/convex-mcp))
+- **Context7 MCP** - Context management ([docs](https://github.com/context7/context7-mcp))
+
+Installation guides for each MCP server are available in the `agent-tree/mcp-installation-docs/` directory.
 
 ## What It Does
 

@@ -6,7 +6,7 @@
 
 **Process**:
 1. **Analyze** user requests and notes thoroughly
-2. **Search** codebase with Serena MCP for relevant context  
+2. **Search** codebase for relevant context  
 3. **Create** numbered QA file in WORK_LOAD folder
 
 **File Naming**: `qa-<YYYY-MM-DD>-<agent-name>-<status>.md`

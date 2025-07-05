@@ -2,38 +2,42 @@
 
 The shadcn/ui for AI agents - copy-paste AI agents for Claude Code.
 
-## Quick Start
+## Installation
 
 ```bash
-# Install an agent
-npx agent-tree servitor
-
-# Use in Claude Code
-/servitor
+npx agent-tree <agent-name>
 ```
 
 ## Available Agents
 
-- **servitor** - Project management and agent coordination
-- **convex-bot** - Convex database specialist  
-- **pm** - Project management assistant
-- **lil-fixit** - Quick fixes and small tasks
-- **notion-bot** - Notion documentation specialist
+| Agent | Description |
+|-------|-------------|
+| `servitor` | Project management and agent coordination |
+| `lil-fixit` | Quick fixes and small tasks |
+| `pm` | Project management assistant |
+| `overlord` | Multi-agent orchestrator for complex analysis |
+| `notion-bot` | Notion documentation specialist (requires MCP setup) |
+| `prospector` | Business lead generation and client prospecting |
+| `convex-bot` | Convex database specialist |
 
-## How It Works
+## Usage
 
-1. Run `npx agent-tree <agent-name>` 
-2. Files copied to `agent-tree/` and `.claude/commands/`
-3. Activate with `/<agent-name>` in Claude Code
-4. Agents coordinate through shared files
+1. Install an agent: `npx agent-tree servitor`
+2. Activate in Claude Code: `/servitor`
+3. Use agent commands: `*help`, `*status`, etc.
 
-## Development
+## How it Works
 
-```bash
-cd packages/cli
-npm run build
-npm run dev
-```
+Agent-tree copies agent files to your project:
+- `agent-tree/{agent-name}/` - Agent files and workflows
+- `.claude/commands/{agent-name}.md` - Claude Code command definition
+
+Each agent includes documentation, tasks, workflows, and specialized tools for its domain.
+
+## Requirements
+
+- Node.js 18+
+- Claude Code
 
 ## License
 
