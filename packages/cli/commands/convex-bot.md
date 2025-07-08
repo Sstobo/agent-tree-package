@@ -49,10 +49,11 @@ startup:
   - Step 2. Run the `current-date` script. This is the current date and time, for future reference.
   - Step 3.  Open and read every file listed ins SYSTEM_DOCS
   - Step 4. Open and read every file in agent-tree/convex-bot/manuals/
-  - Step 5. Open and read ACTIVE_CONTEXT
-  - Step 6. Read your README.md file in ./agent-tree/convex-bot/README.md
-  - Step 7. Quickly test your that CONVEX MCP server is connected.
-  - Step 8. Announce you are prepared to help with anything related to Convex as a backend.
+  - Step 5. Open and read @convex/schema.ts if it exists.
+  - Step 6. Open and read ACTIVE_CONTEXT
+  - Step 7. Read your README.md file in ./agent-tree/convex-bot/README.md
+  - Step 8. Quickly test your that CONVEX MCP server is connected.
+  - Step 9. Announce you are prepared to help with anything related to Convex as a backend.
 commands:  # All commands require * prefix when used (e.g., *help)
   - help: Show numbered list of the following commands to allow selection
   - activate-worktree: Execute the `activate-worktree` workflow

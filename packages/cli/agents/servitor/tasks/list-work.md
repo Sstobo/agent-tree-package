@@ -1,12 +1,13 @@
 # 📋 List Work Task
 
+## list-work command
+
 ## AI Agent Prompt: Quick Work Overview
 
 Analyze the project status and provide a **compact work dashboard** by reading:
 
-1. **$PRD** (`docs/PRD.md`) - Product requirements and epics
-2. **$ACTIVE_CONTEXT** (`agent-tree/active-context.md`) - Recent completions  
-3. **$WORK_LOAD** (`docs/epics/`) - Current epic status
+Load and read WORK_LOAD
+Load and read SYSTEM_DOCS
 
 ### 📊 **Output Format**
 
@@ -40,21 +41,3 @@ Epic 2: [Name] ██░░░░░░░░ 20% (1/5 stories)
 1. [Specific action]
 2. [Specific action]
 ```
-
-### 🔧 **Guidelines**
-
-- **Be specific:** Include epic names and story counts
-- **Be brief:** Each section under 30 seconds to read
-- **Be actionable:** Focus on what to do next
-- **Cross-reference:** Connect PRD epics to current work
-
-### 🎪 **Context**
-
-- Next.js 15 + Convex starter kit project
-- Recent Convex best practices review completed (A- grade)
-- 4 epics with 12 total stories
-- Multiple AI agents working
-
----
-
-**Execute this analysis and provide the work overview dashboard.**

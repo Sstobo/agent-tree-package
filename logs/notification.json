@@ -1,0 +1,26 @@
+[
+  {
+    "session_id": "b803a792-12e4-4155-af08-2f7a0520ef1d",
+    "transcript_path": "/Users/seanstobo/.claude/projects/-Users-seanstobo-Desktop-Workshop-agent-tree-package/b803a792-12e4-4155-af08-2f7a0520ef1d.jsonl",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "6d061222-1dbd-4cae-9db3-4d1f6fe05154",
+    "transcript_path": "/Users/seanstobo/.claude/projects/-Users-seanstobo-Desktop-Workshop-agent-tree-package/6d061222-1dbd-4cae-9db3-4d1f6fe05154.jsonl",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use Bash"
+  },
+  {
+    "message": "Test notification",
+    "timestamp": "2025-01-08T10:00:00Z"
+  },
+  {
+    "message": "Test notification with audio",
+    "timestamp": "2025-01-08T10:00:00Z"
+  },
+  {
+    "message": "Claude is waiting for your input",
+    "timestamp": "2025-01-08T10:00:00Z"
+  }
+]
