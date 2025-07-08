@@ -4,5 +4,35 @@
     "transcript_path": "/Users/seanstobo/.claude/projects/-Users-seanstobo-Desktop-Workshop-agent-tree-package/b803a792-12e4-4155-af08-2f7a0520ef1d.jsonl",
     "hook_event_name": "SubagentStop",
     "stop_hook_active": false
+  },
+  {
+    "session_id": "2ba1abb9-3646-4687-a156-4c1aa02a4c18",
+    "transcript_path": "/Users/seanstobo/.claude/projects/-Users-seanstobo-Desktop-Workshop-agent-tree-package/2ba1abb9-3646-4687-a156-4c1aa02a4c18.jsonl",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "2ba1abb9-3646-4687-a156-4c1aa02a4c18",
+    "transcript_path": "/Users/seanstobo/.claude/projects/-Users-seanstobo-Desktop-Workshop-agent-tree-package/2ba1abb9-3646-4687-a156-4c1aa02a4c18.jsonl",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "2ba1abb9-3646-4687-a156-4c1aa02a4c18",
+    "transcript_path": "/Users/seanstobo/.claude/projects/-Users-seanstobo-Desktop-Workshop-agent-tree-package/2ba1abb9-3646-4687-a156-4c1aa02a4c18.jsonl",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "2ba1abb9-3646-4687-a156-4c1aa02a4c18",
+    "transcript_path": "/Users/seanstobo/.claude/projects/-Users-seanstobo-Desktop-Workshop-agent-tree-package/2ba1abb9-3646-4687-a156-4c1aa02a4c18.jsonl",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "2ba1abb9-3646-4687-a156-4c1aa02a4c18",
+    "transcript_path": "/Users/seanstobo/.claude/projects/-Users-seanstobo-Desktop-Workshop-agent-tree-package/2ba1abb9-3646-4687-a156-4c1aa02a4c18.jsonl",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
   }
 ]

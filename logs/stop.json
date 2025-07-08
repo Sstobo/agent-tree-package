@@ -94,5 +94,17 @@
     "transcript_path": "/Users/seanstobo/.claude/projects/-Users-seanstobo-Desktop-Workshop-agent-tree-package/da6398d7-7ad0-42fe-8453-cfce5f441acd.jsonl",
     "hook_event_name": "Stop",
     "stop_hook_active": false
+  },
+  {
+    "session_id": "da6398d7-7ad0-42fe-8453-cfce5f441acd",
+    "transcript_path": "/Users/seanstobo/.claude/projects/-Users-seanstobo-Desktop-Workshop-agent-tree-package/da6398d7-7ad0-42fe-8453-cfce5f441acd.jsonl",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "da6398d7-7ad0-42fe-8453-cfce5f441acd",
+    "transcript_path": "/Users/seanstobo/.claude/projects/-Users-seanstobo-Desktop-Workshop-agent-tree-package/da6398d7-7ad0-42fe-8453-cfce5f441acd.jsonl",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
   }
 ]
