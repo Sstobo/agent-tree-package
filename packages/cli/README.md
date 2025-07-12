@@ -60,31 +60,35 @@ Then activate the agent in Claude Code:
 
 ### Development Workflow
 ```bash
-# Install and coordinate development
-npx agent-tree servitor
-/servitor *scan medium          # Deploy 6-10 agents for analysis
-/servitor *activate-worktree    # Create isolated development branch
-
 # Handle maintenance
 npx agent-tree lil-fixit
-/lil-fixit *grab-ticket        # Claim and fix QA tickets
+**In Claude:**
+/lil-fixit 
+
+*grab-ticket        # Claim and fix QA tickets
 ```
 
 ### Business Intelligence Workflow  
 ```bash
 # Install and research leads
 npx agent-tree prospector
-/prospector *go-prospectin      # Comprehensive lead generation
-/prospector *extract-contact https://company.com
+**In Claude:**
+/prospector 
+
+*go-prospectin      # Comprehensive lead generation
+*extract-contact https://company.com
 ```
 
 ### Project Management Workflow
 ```bash
 # Install and organize project
 npx agent-tree pm
-/pm *create-prd                 # Create requirements document
-/pm *qa-list                    # Generate QA checklist
-/pm *status                     # Monitor project health
+**In Claude:**
+/pm 
+
+*create-prd                 # Create requirements document
+*qa-list                    # Generate QA checklist
+*status                     # Monitor project health
 ```
 
 ## Installation & Setup
