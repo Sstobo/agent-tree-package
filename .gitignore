@@ -21,7 +21,6 @@ dist/
 
 # Claude Code files
 .claude/
-agent-tree/
 
 # OS
 .DS_Store
