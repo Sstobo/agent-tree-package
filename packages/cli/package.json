@@ -1,6 +1,6 @@
 {
   "name": "agent-tree",
-  "version": "0.2.14",
+  "version": "0.2.17",
   "description": "The shadcn/ui for AI agents - copy-paste AI agents for Claude Code",
   "bin": {
     "agent-tree": "./dist/index.js"
@@ -8,11 +8,7 @@
   "type": "module",
   "files": [
     "dist",
-    "agents",
-    "commands",
-    "agent-tree/agent-tree-config.md",
-    "agent-tree/active-context.md",
-    "agent-tree/mcp-installation-docs",
+    "agent-tree",
     "LICENSE"
   ],
   "scripts": {

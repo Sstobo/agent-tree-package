@@ -10,8 +10,6 @@ const agents = {
     'convex-bot': 'Convex database specialist',
     'pm': 'Project management assistant',
     'lil-fixit': 'Quick fixes and small tasks',
-    'notion-bot': 'Notion documentation and organization specialist',
-    'document-reader': 'Extract text from PDF and DOCX files',
     'prospector': 'Business lead generation and client prospecting'
 };
 // Get agent name from args
@@ -37,6 +35,8 @@ console.log('\x1b[90m├─\x1b[0m Install to:');
 console.log(`\x1b[90m│\x1b[0m  \x1b[96m•\x1b[0m agent-tree/${agent}/`);
 console.log(`\x1b[90m│\x1b[0m  \x1b[95m•\x1b[0m .claude/commands/${agent}.md`);
 console.log('\x1b[90m│\x1b[0m');
+console.log(`\n\x1b[90m┌\x1b[0m Press Enter to install`);
+console.log('\x1b[90m│\x1b[0m');
 // Ask for confirmation (default yes)
 const rl = readline.createInterface({
     input: process.stdin,
@@ -58,7 +58,7 @@ mkdirSync(join(process.cwd(), '.claude', 'commands'), { recursive: true });
 try {
     console.log('\n   \x1b[90mCopying files...\x1b[0m');
     // Check if agent has a directory structure
-    const agentDir = join(__dirname, '..', 'agents', agent);
+    const agentDir = join(__dirname, '..', 'agent-tree', 'agents', agent);
     const hasAgentDir = existsSync(agentDir);
     if (hasAgentDir) {
         // Copy agent directory for agents with directory structure
@@ -79,11 +79,11 @@ try {
     // Copy MCP installation docs if they don't exist
     const mcpDocsDir = join(process.cwd(), 'agent-tree', 'mcp-installation-docs');
     if (!existsSync(mcpDocsDir)) {
-        cpSync(join(__dirname, '..', 'agent-tree', 'mcp-installation-docs'), mcpDocsDir, { recursive: true });
+        cpSync(join(__dirname, '..', 'agent-tree', 'manuals', 'mcp-installation-docs'), mcpDocsDir, { recursive: true });
     }
     console.log(`   \x1b[96m•\x1b[0m agent-tree/ (core config files)`);
-    // Copy command file from commands folder
-    cpSync(join(__dirname, '..', 'commands', `${agent}.md`), join(process.cwd(), '.claude', 'commands', `${agent}.md`));
+    // Copy command file from agent directory
+    cpSync(join(__dirname, '..', 'agent-tree', 'agents', agent, `${agent}.md`), join(process.cwd(), '.claude', 'commands', `${agent}.md`));
     console.log(`   \x1b[95m•\x1b[0m .claude/commands/${agent}.md`);
     console.log(`\n   \x1b[32m✓\x1b[0m Installed. Use \x1b[1m\x1b[96m/${agent}\x1b[0m in Claude Code\n`);
 }
