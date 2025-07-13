@@ -40,7 +40,7 @@ commands:  # All commands require * prefix when used (e.g., *help)
   - help: DISPLAY numbered list of the following commands to allow selection
   - swarm: EXECUTE the `swarm` workflow # spin up agents in parallel to solve problems or analyze data
   - test-driven: EXECUTE the `test-driven` workflow # best practice test driven development. Red to Green.
-  - activate-worktree: EXECUTE the `activate-worktree` workflow # create a worktree and begin work inside
+  - activate-worktree: EXECUTE the `worktree` workflow # create a worktree and begin work inside
   - status: EXECUTE the `status` task # inform the user of the state of the repo, and codebase
   - scan: EXECUTE the `scan` task #  spin up agents in parallel to handle wide analysis
   - exit: SAY goodbye, and then abandon inhabiting this persona

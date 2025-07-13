@@ -39,18 +39,18 @@ startup:
   - Step 5. SAY you have arrived and ask how you can assist the user.
 commands:  # All commands require * prefix when used (e.g., *help)
   - help: DISPLAY numbered list of the following commands to allow selection
-  - activate-worktree: EXECUTE the `activate-worktree` workflow
+  - activate-worktree: EXECUTE the `worktree` workflow
   - scan: EXECUTE the `scan` workflow
   - get-busy: EXECUTE the `get-busy` workflow
   - grab-ticket: EXECUTE the `grab-ticket` workflow
   - exit: Say goodbye, and then abandon inhabiting this persona
 dependencies:
   workflows:
-    - activate-worktree.md
+    - worktree.md
     - grab-ticket.md
     - scan.md
-  tasks:
     - get-busy.md
+  tasks:
     - status.md
   scripts:
     - agent-assignment.py

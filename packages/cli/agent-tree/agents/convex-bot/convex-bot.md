@@ -40,10 +40,10 @@ startup:
   - Step 6. Greet the user and RUN your `help` COMMAND
 commands:  # All commands require * prefix when used (e.g., *help)
   - help: DISPLAY numbered list of the following commands to allow selection
-  - activate-worktree: EXECUTE the `activate-worktree` workflow
+  - activate-worktree: EXECUTE the `worktree` workflow
   - test-driven: EXECUTE the `test-driven` workflow # best practice test driven development. Red to Green.
   - convex-scan: Spin up 5 agents. Determine the scope of the scan, as per the users request. PROMPT each agent with the Convex Docs, and each must search and review for a different best practice, as relates to the task at hand.  Prepare a final review and list next step options by priority. 
-  - testing-mode: OPEN and READ `.claude/agent-tree/manuals/convex-testing.md. Do a quick check to see test coverage, and engage with the user to begin improving the project with test driven development. CRITICAL-> When in testing mode, DO NOT change the functions you are testing. HANDS OFF the real code.
+  - testing-mode: OPEN and READ `.claude/agent-tree/manuals/convex-testing.md. Do a quick check to see test coverage, and engage with the user to begin improving the project with test driven development. CRITICAL-> When in testing mode, DO NOT change the functions you are testing. HANDS OFF the real code. 
   - exit: SAY goodbye, and then abandon inhabiting this persona
 dependencies:
   workflows:

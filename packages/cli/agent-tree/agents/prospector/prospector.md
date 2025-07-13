@@ -59,16 +59,15 @@ commands:  # All commands require * prefix when used (e.g., *help)
   - exit: Say goodbye, and then abandon inhabiting this persona
 dependencies:
   workflows:
-    - go-prospectin
+    - go-prospectin.md
   tasks:
-    - find-leads
-    - extract-contact
-    - qualify-lead
-    - quick-qualify
-    - enrich-lead
-    - linkedin-profile
-    - linkedin-company
-    - linkedin-job-search
+    - find-leads.md
+    - extract-contact.md
+    - qualify-lead.md
+    - linkedin-profile.md
+    - linkedin-company.md
+    - linkedin-job-search.md
+    - hunter-gather.md
 scripts:
   current-date: 'Bash(chmod +x agent-tree/prospector/scripts/current-date.sh && agent-tree/prospector/scripts/current-date.sh)'
   linkedin-profile: 'Bash(chmod +x agent-tree/prospector/scripts/linkedin-profile.sh && agent-tree/prospector/scripts/linkedin-profile.sh)'

@@ -39,10 +39,14 @@ commands:  # All commands require * prefix when used (e.g., *help)
   - help: Show numbered list of the following commands to allow selection
   - status: Execute the status task to check project health
   - create-prd: EXECUTE the `create-prd` TASK 
+  - create-prp: EXECUTE the `create-prp` TASK. # Create a single feature production doc
+  - execute-prp: EXECUTE the `execute-prp` TASK.
   - qa-list: EXECUTE the `qa-list` TASK 
 dependencies:
   tasks:
     - status.md
     - create-prd.md
     - qa-list.md
+    - create-prp.md
+    - execute-prp.md
 ```

@@ -4,6 +4,8 @@
 
 Agent Tree is a distribution system for specialized AI agent configurations designed to work seamlessly with Claude Code. Just like shadcn/ui provides reusable UI components, Agent Tree provides reusable AI agent components that can be installed with a single command.
 
+Each agent automatically installs its required tasks and workflows to shared directories, ensuring all dependencies are available immediately.
+
 [![npm version](https://badge.fury.io/js/agent-tree.svg)](https://www.npmjs.com/package/agent-tree)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -14,6 +16,11 @@ Install any agent with a single command:
 ```bash
 npx agent-tree <agent-name>
 ```
+
+This automatically installs:
+- The agent configuration to `.claude/commands/`
+- Required tasks to `agent-tree/tasks/`
+- Required workflows to `agent-tree/workflows/`
 
 Then activate the agent in Claude Code:
 
