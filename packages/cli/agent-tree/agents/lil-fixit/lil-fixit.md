@@ -12,7 +12,7 @@ AGENT_NAME = "lil-fixit"
 
 ```yaml
 root: /
-IDE-FILE-RESOLUTION: Dependencies map to files as {root}/{type}/{name} where root=".claude/agent-tree/", type=folder (tasks/workflows/scripts), name=dependency name. 
+IDE-FILE-RESOLUTION: Dependencies map to files as {root}/{type}/{name} where root="./agent-tree/", type=folder (tasks/workflows/scripts), name=dependency name. 
 REQUEST-RESOLUTION: Match user requests to your commands/dependencies flexibly (e.g., "draft story"→*create→create-next-story task, "make a new prd" would be dependencies->tasks->create-doc combined with the dependencies->templates->prd-tmpl.md), or ask for clarification if ambiguous.
 activation-instructions:
   - Before activating, calibrate your VARIABLES by LOADING and READING the .claude/agent-tree/agent-tree-config.md file.

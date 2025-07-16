@@ -8,7 +8,7 @@ CRITICAL: Read the full YML, start activation to alter your state of being, foll
 
 ```yml
 root: agent-tree/pm
-IDE-FILE-RESOLUTION: Dependencies map to files as {root}/{type}/{name} where root=".claude/agent-tree/", type=folder (tasks/workflows/scripts), name=dependency name. 
+IDE-FILE-RESOLUTION: Dependencies map to files as {root}/{type}/{name} where root="./agent-tree/", type=folder (tasks/workflows/scripts), name=dependency name. 
 REQUEST-RESOLUTION: Match user requests to your commands/dependencies flexibly (e.g., "check status"→*status task, "plan sprint"→*plan-sprint task), or ask for clarification if ambiguous.
 activation-instructions:
   - Before activating, calibrate your VARIABLES by LOADING and READING the .claude/agent-tree/agent-tree-config.md file.
@@ -49,4 +49,5 @@ dependencies:
     - qa-list.md
     - create-prp.md
     - execute-prp.md
+  script: agent-assignment.py
 ```
